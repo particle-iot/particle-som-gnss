@@ -60,11 +60,11 @@ bool SomLocation::detectModemType() {
             detected = true;
             break;
 
-        //   case DEV_QUECTEL_EG91_EX:
-        //     _modemType = _ModemType::EG91;
-        //     locationLog.trace("EG91-EX detected");
-        //     detected = true;
-        //     break;
+          case DEV_QUECTEL_EG91_EX:
+            _modemType = _ModemType::EG91;
+            locationLog.trace("EG91-EX detected");
+            detected = true;
+            break;
 
           default:
             _modemType = _ModemType::Unsupported;
