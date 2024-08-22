@@ -423,10 +423,10 @@ void SomLocation::threadLoop()
                             firstFix = System.millis();
                             event.point->systemTime = Time.now();
                         }
-                    }
-                    if (_ModemType::BG95_M5 == _modemType) {
-                        Cellular.command(epeCallback, _epeBuffer, 1000, R"(AT+QGPSCFG="estimation_error")");
-                        parseEpeResponse(_epeBuffer, _epeContext, *event.point);
+                        if (_ModemType::BG95_M5 == _modemType) {
+                            Cellular.command(epeCallback, _epeBuffer, 1000, R"(AT+QGPSCFG="estimation_error")");
+                            parseEpeResponse(_epeBuffer, _epeContext, *event.point);
+                        }
                     }
                     if ((CME_Error::FIX == ret) && (LOCATION_REQUIRED_SETTLING_COUNT == fixCount) &&
                         (event.point->horizontalDop <= _conf.hdopThreshold()) &&
