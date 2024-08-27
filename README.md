@@ -12,9 +12,14 @@ This library is targeted for the M-SOM platform and can only be built with devic
 - User-Friendly API: Provides a straightforward API to configure, control, retrieve GNSS data, and publish to console maps interfaces with location service.
 ---
 ## Installation
-You can install the library via Particle's library manager on the command line, VS Code (Workbench), or by directly cloning this repository.
+You can install the library via Particle's library manager on the command line, or by directly cloning this repository.
 ```bash
 particle library add particle-som-gnss
+```
+
+If developing in VS Code, type this in the search bar:
+```bash
+>particle: install library
 ```
 
 ## API
